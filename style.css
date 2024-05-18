@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+.products {
+    height: max-content;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container {
+    margin-inline: auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.container h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+}
+
+.container h2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
+
+    row-gap: 25px;
+    column-gap: 25px;
+
+    justify-content: center;
+    justify-items: center;
+}
+
+/* TODO make this more responsive */
+
+.card {
+    width: 240px;
+
+    background-color: white;
+    box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.5);
+
+    padding: 20px;
+    border-radius: 5px;
+
+    overflow-wrap: break-word !important;
+
+    border: 2px solid black;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+
+.card img {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid black;
+}
+
+.card__title {
+    /* height: 50px; */
+    padding-top: 3%;
+    padding-bottom: 4%;
+    text-align: center;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card__description {
+    /* height: 75px; */
+    padding-bottom: 2.5%;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media screen and (max-width: 650px) {
+
+    .card {
+        width: 86.67%;
+    }
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 0px;
+}
